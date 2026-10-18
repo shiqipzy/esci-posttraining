@@ -1,0 +1,5 @@
+ESCI search relevance post-training project.
+Dataset source: amazon-science/esci-data. No dataset files are distributed here.
+Base model: Qwen/Qwen3-0.6B. No model weights are distributed here.
+DeepSeek is the external teacher API provider; no API credentials are distributed.
+Third-party data, model weights, libraries and names retain their upstream rights.

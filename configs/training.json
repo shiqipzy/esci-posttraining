@@ -1,0 +1,48 @@
+{
+  "sft": {
+    "seed": 20260928,
+    "epochs": 2,
+    "train_split": "pilot_train",
+    "train_queries": 1024,
+    "max_length": 512,
+    "group_size": 2,
+    "groups_per_update": 16,
+    "micro_groups": 1,
+    "eval_batch_size": 8,
+    "learning_rate": 0.0001,
+    "warmup_ratio": 0.05,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "gradient_checkpointing": true,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "posttraining": {
+    "seed": 20261001,
+    "arms": [
+      "A2",
+      "TA2",
+      "G2"
+    ],
+    "epochs": 2,
+    "effective_batch": 32,
+    "microbatch": 4,
+    "learning_rate": 2e-05,
+    "warmup_steps": 8,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "max_length": 512,
+    "eval_batch_size": 8,
+    "gradient_checkpointing": false
+  }
+}

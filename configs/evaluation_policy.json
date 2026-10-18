@@ -1,0 +1,18 @@
+{
+  "classification_metrics": [
+    "accuracy",
+    "macro_f1"
+  ],
+  "classification_reporting": "parallel metrics with separate paired confidence intervals; no composite score",
+  "ranking_metrics": [
+    "ndcg10"
+  ],
+  "classification_unit": "query-product pair",
+  "accuracy_denominator": "all 10459 final-F pairs; teacher abstentions count as incorrect",
+  "ranking_unit": "query",
+  "bootstrap_unit": "whole query, paired across systems",
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 20260930,
+  "result_source": "results/final/analysis.json",
+  "scope": "current reporting and offline display; frozen training, predictions and audit records retain their original contents"
+}

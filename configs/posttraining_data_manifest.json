@@ -1,0 +1,12 @@
+{
+  "version": "esci-training-data-v2",
+  "train_pairs": 10398,
+  "train_queries": 512,
+  "teacher_available": 10387,
+  "teacher_correct": 5467,
+  "files": {
+    "train.jsonl": "b6403a21b12ad67f5c1e63f06bd7b33291c52459842007d887b2a0919689f62e",
+    "teacher.jsonl": "988aede6e6d66bfd50ee402f656746bd114fe509734a3c5533bf195adc54ce6f"
+  },
+  "reference": "Computed from the newly trained S model during each run."
+}

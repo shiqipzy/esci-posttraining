@@ -1,0 +1,9 @@
+# Install a CUDA-compatible torch separately; the reference remote used 2.8.0+cu128.
+transformers==4.57.6
+peft==0.18.1
+accelerate==1.14.0
+huggingface-hub==0.36.2
+safetensors==0.8.0
+numpy==1.26.4
+pandas==2.2.3
+pyarrow==19.0.1
