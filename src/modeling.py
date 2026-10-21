@@ -43,7 +43,9 @@ class RelevanceModel(torch.nn.Module):
             self.eval()
 
     def base_model(self):
-        return self.backbone.get_base_model()
+        # PeftModel wraps the Qwen model; a bare backbone is already the base model.
+        getter = getattr(self.backbone, 'get_base_model', None)
+        return getter() if getter is not None else self.backbone
 
     def forward(self, features):
         # LoRA modules are installed inside the underlying Qwen layers. Avoid materializing

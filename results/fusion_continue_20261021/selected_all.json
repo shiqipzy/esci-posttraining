@@ -1,0 +1,2711 @@
+{
+  "CE_CONT": {
+    "arm": "CE_CONT",
+    "checkpoint": "CE_CONT/step-0569",
+    "selected_step": 569,
+    "selected_exposures": 18206,
+    "stopped_step": 650,
+    "stopped_exposures": 20796,
+    "stop_reason": "budget_exhausted",
+    "selected_adapter_sha256": "49b55a716d1281b59b9dab832a7f96993fccfb16eaa1378cd356c5113be0ac00",
+    "selection_rule": "highest tune Macro-F1; exact tie highest nDCG@10; exact tie earliest step",
+    "tune": {
+      "step": 569,
+      "exposures": 18206,
+      "epoch": 1.7509136372379304,
+      "pairs": 5223,
+      "queries": 256,
+      "zero_idcg_queries": 0,
+      "labels": [
+        "E",
+        "S",
+        "C",
+        "I"
+      ],
+      "gains": [
+        1.0,
+        0.1,
+        0.01,
+        0.0
+      ],
+      "ndcg10": 0.7403921415010739,
+      "ndcg_full": 0.8413287440682354,
+      "random_ndcg10": 0.5684423211524218,
+      "exact_at_1": 0.671875,
+      "confusion": [
+        [
+          1520,
+          502,
+          35,
+          164
+        ],
+        [
+          697,
+          977,
+          24,
+          183
+        ],
+        [
+          65,
+          43,
+          60,
+          71
+        ],
+        [
+          234,
+          223,
+          24,
+          401
+        ]
+      ],
+      "accuracy": 0.5663411832280298,
+      "per_class": {
+        "E": {
+          "support": 2221,
+          "predicted": 2516,
+          "precision": 0.604133545310016,
+          "recall": 0.6843764070238632,
+          "f1": 0.6417563858982478
+        },
+        "S": {
+          "support": 1881,
+          "predicted": 1745,
+          "precision": 0.5598853868194842,
+          "recall": 0.519404572036151,
+          "f1": 0.5388858246001104
+        },
+        "C": {
+          "support": 239,
+          "predicted": 143,
+          "precision": 0.4195804195804196,
+          "recall": 0.2510460251046025,
+          "f1": 0.31413612565445026
+        },
+        "I": {
+          "support": 882,
+          "predicted": 819,
+          "precision": 0.4896214896214896,
+          "recall": 0.4546485260770975,
+          "f1": 0.4714873603762493
+        }
+      },
+      "macro_f1": 0.4915664241322644,
+      "nll": {
+        "mean": 1.023689926076003,
+        "rows": 5223,
+        "abstentions": 0,
+        "clip": 1e-12,
+        "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+      }
+    },
+    "history": [
+      {
+        "step": 0,
+        "exposures": 0,
+        "epoch": 0.0,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7439530148653759,
+        "ndcg_full": 0.8441611831396708,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6875,
+        "confusion": [
+          [
+            1391,
+            609,
+            36,
+            185
+          ],
+          [
+            582,
+            1058,
+            30,
+            211
+          ],
+          [
+            61,
+            49,
+            51,
+            78
+          ],
+          [
+            182,
+            268,
+            29,
+            403
+          ]
+        ],
+        "accuracy": 0.5558108366838982,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2216,
+            "precision": 0.6277075812274369,
+            "recall": 0.6262944619540748,
+            "f1": 0.6270002253775073
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1984,
+            "precision": 0.5332661290322581,
+            "recall": 0.5624667729930888,
+            "f1": 0.547477360931436
+          },
+          "C": {
+            "support": 239,
+            "predicted": 146,
+            "precision": 0.3493150684931507,
+            "recall": 0.21338912133891214,
+            "f1": 0.2649350649350649
+          },
+          "I": {
+            "support": 882,
+            "predicted": 877,
+            "precision": 0.45952109464082097,
+            "recall": 0.45691609977324266,
+            "f1": 0.45821489482660605
+          }
+        },
+        "macro_f1": 0.47440688651765356,
+        "nll": {
+          "mean": 1.0516623231741644,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 82,
+        "exposures": 2624,
+        "epoch": 0.252356222350452,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7517027122534556,
+        "ndcg_full": 0.8483524473102843,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.703125,
+        "confusion": [
+          [
+            1791,
+            269,
+            19,
+            142
+          ],
+          [
+            1020,
+            683,
+            10,
+            168
+          ],
+          [
+            103,
+            21,
+            51,
+            64
+          ],
+          [
+            354,
+            153,
+            17,
+            358
+          ]
+        ],
+        "accuracy": 0.5519816197587594,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 3268,
+            "precision": 0.5480416156670747,
+            "recall": 0.8063935164340387,
+            "f1": 0.6525778830388049
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1126,
+            "precision": 0.6065719360568383,
+            "recall": 0.36310473152578415,
+            "f1": 0.4542733621549717
+          },
+          "C": {
+            "support": 239,
+            "predicted": 97,
+            "precision": 0.5257731958762887,
+            "recall": 0.21338912133891214,
+            "f1": 0.30357142857142855
+          },
+          "I": {
+            "support": 882,
+            "predicted": 732,
+            "precision": 0.4890710382513661,
+            "recall": 0.40589569160997735,
+            "f1": 0.4436183395291202
+          }
+        },
+        "macro_f1": 0.46351025332358137,
+        "nll": {
+          "mean": 1.0174956206310535,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 163,
+        "exposures": 5216,
+        "epoch": 0.5016349297941912,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.747104520168145,
+        "ndcg_full": 0.8443866876752874,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6875,
+        "confusion": [
+          [
+            1393,
+            657,
+            30,
+            141
+          ],
+          [
+            562,
+            1157,
+            15,
+            147
+          ],
+          [
+            63,
+            57,
+            42,
+            77
+          ],
+          [
+            189,
+            303,
+            12,
+            378
+          ]
+        ],
+        "accuracy": 0.5686387133831131,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2207,
+            "precision": 0.6311735387403715,
+            "recall": 0.6271949572264746,
+            "f1": 0.6291779584462511
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 2174,
+            "precision": 0.5321987120515179,
+            "recall": 0.6150983519404573,
+            "f1": 0.5706535141800246
+          },
+          "C": {
+            "support": 239,
+            "predicted": 99,
+            "precision": 0.42424242424242425,
+            "recall": 0.17573221757322174,
+            "f1": 0.2485207100591716
+          },
+          "I": {
+            "support": 882,
+            "predicted": 743,
+            "precision": 0.5087483176312247,
+            "recall": 0.42857142857142855,
+            "f1": 0.4652307692307692
+          }
+        },
+        "macro_f1": 0.47839573797905416,
+        "nll": {
+          "mean": 0.9921307999062781,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 244,
+        "exposures": 7808,
+        "epoch": 0.7509136372379304,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7457446425347773,
+        "ndcg_full": 0.8459844484285511,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.67578125,
+        "confusion": [
+          [
+            1586,
+            454,
+            55,
+            126
+          ],
+          [
+            743,
+            954,
+            44,
+            140
+          ],
+          [
+            66,
+            38,
+            71,
+            64
+          ],
+          [
+            257,
+            222,
+            54,
+            349
+          ]
+        ],
+        "accuracy": 0.5667241049205437,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2652,
+            "precision": 0.5980392156862745,
+            "recall": 0.7140927510130571,
+            "f1": 0.6509337163964704
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1668,
+            "precision": 0.5719424460431655,
+            "recall": 0.507177033492823,
+            "f1": 0.5376162299239222
+          },
+          "C": {
+            "support": 239,
+            "predicted": 224,
+            "precision": 0.3169642857142857,
+            "recall": 0.29707112970711297,
+            "f1": 0.30669546436285094
+          },
+          "I": {
+            "support": 882,
+            "predicted": 679,
+            "precision": 0.5139911634756995,
+            "recall": 0.3956916099773243,
+            "f1": 0.44714926329276106
+          }
+        },
+        "macro_f1": 0.48559866849400113,
+        "nll": {
+          "mean": 0.9909618144510604,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 325,
+        "exposures": 10398,
+        "epoch": 1.0,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.748661648777059,
+        "ndcg_full": 0.846274188274766,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6796875,
+        "confusion": [
+          [
+            1547,
+            479,
+            25,
+            170
+          ],
+          [
+            705,
+            956,
+            9,
+            211
+          ],
+          [
+            73,
+            44,
+            29,
+            93
+          ],
+          [
+            239,
+            205,
+            7,
+            431
+          ]
+        ],
+        "accuracy": 0.5672984874593145,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2564,
+            "precision": 0.6033541341653667,
+            "recall": 0.6965330932012607,
+            "f1": 0.6466039707419018
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1684,
+            "precision": 0.5676959619952494,
+            "recall": 0.5082402977139819,
+            "f1": 0.5363253856942497
+          },
+          "C": {
+            "support": 239,
+            "predicted": 70,
+            "precision": 0.4142857142857143,
+            "recall": 0.12133891213389121,
+            "f1": 0.18770226537216828
+          },
+          "I": {
+            "support": 882,
+            "predicted": 905,
+            "precision": 0.47624309392265196,
+            "recall": 0.4886621315192744,
+            "f1": 0.48237269166200336
+          }
+        },
+        "macro_f1": 0.4632510783675808,
+        "nll": {
+          "mean": 0.9999227272845215,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 407,
+        "exposures": 13022,
+        "epoch": 1.252356222350452,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.744202844997814,
+        "ndcg_full": 0.8427895807422858,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.671875,
+        "confusion": [
+          [
+            1537,
+            500,
+            31,
+            153
+          ],
+          [
+            709,
+            987,
+            19,
+            166
+          ],
+          [
+            68,
+            46,
+            55,
+            70
+          ],
+          [
+            244,
+            231,
+            18,
+            389
+          ]
+        ],
+        "accuracy": 0.5682557916905993,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2558,
+            "precision": 0.6008600469116497,
+            "recall": 0.6920306168392616,
+            "f1": 0.6432308014228918
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1764,
+            "precision": 0.5595238095238095,
+            "recall": 0.5247208931419458,
+            "f1": 0.5415637860082304
+          },
+          "C": {
+            "support": 239,
+            "predicted": 123,
+            "precision": 0.44715447154471544,
+            "recall": 0.2301255230125523,
+            "f1": 0.30386740331491713
+          },
+          "I": {
+            "support": 882,
+            "predicted": 778,
+            "precision": 0.5,
+            "recall": 0.4410430839002268,
+            "f1": 0.4686746987951807
+          }
+        },
+        "macro_f1": 0.489334172385305,
+        "nll": {
+          "mean": 1.0155930018982204,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 488,
+        "exposures": 15614,
+        "epoch": 1.501634929794191,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7421197023340318,
+        "ndcg_full": 0.8424968274047236,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.66796875,
+        "confusion": [
+          [
+            1470,
+            547,
+            48,
+            156
+          ],
+          [
+            649,
+            1028,
+            35,
+            169
+          ],
+          [
+            61,
+            44,
+            66,
+            68
+          ],
+          [
+            220,
+            239,
+            35,
+            388
+          ]
+        ],
+        "accuracy": 0.5651924181504883,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2400,
+            "precision": 0.6125,
+            "recall": 0.6618640252138677,
+            "f1": 0.636225925124432
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1858,
+            "precision": 0.5532831001076426,
+            "recall": 0.5465178096757044,
+            "f1": 0.549879646964429
+          },
+          "C": {
+            "support": 239,
+            "predicted": 184,
+            "precision": 0.358695652173913,
+            "recall": 0.27615062761506276,
+            "f1": 0.3120567375886525
+          },
+          "I": {
+            "support": 882,
+            "predicted": 781,
+            "precision": 0.4967989756722151,
+            "recall": 0.4399092970521542,
+            "f1": 0.46662657847263983
+          }
+        },
+        "macro_f1": 0.49119722203753835,
+        "nll": {
+          "mean": 1.019566873392248,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 569,
+        "exposures": 18206,
+        "epoch": 1.7509136372379304,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7403921415010739,
+        "ndcg_full": 0.8413287440682354,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.671875,
+        "confusion": [
+          [
+            1520,
+            502,
+            35,
+            164
+          ],
+          [
+            697,
+            977,
+            24,
+            183
+          ],
+          [
+            65,
+            43,
+            60,
+            71
+          ],
+          [
+            234,
+            223,
+            24,
+            401
+          ]
+        ],
+        "accuracy": 0.5663411832280298,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2516,
+            "precision": 0.604133545310016,
+            "recall": 0.6843764070238632,
+            "f1": 0.6417563858982478
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1745,
+            "precision": 0.5598853868194842,
+            "recall": 0.519404572036151,
+            "f1": 0.5388858246001104
+          },
+          "C": {
+            "support": 239,
+            "predicted": 143,
+            "precision": 0.4195804195804196,
+            "recall": 0.2510460251046025,
+            "f1": 0.31413612565445026
+          },
+          "I": {
+            "support": 882,
+            "predicted": 819,
+            "precision": 0.4896214896214896,
+            "recall": 0.4546485260770975,
+            "f1": 0.4714873603762493
+          }
+        },
+        "macro_f1": 0.4915664241322644,
+        "nll": {
+          "mean": 1.023689926076003,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 650,
+        "exposures": 20796,
+        "epoch": 2.0,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7429717639081445,
+        "ndcg_full": 0.8410923782811518,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.67578125,
+        "confusion": [
+          [
+            1535,
+            488,
+            33,
+            165
+          ],
+          [
+            705,
+            967,
+            20,
+            189
+          ],
+          [
+            65,
+            45,
+            58,
+            71
+          ],
+          [
+            236,
+            223,
+            23,
+            400
+          ]
+        ],
+        "accuracy": 0.5667241049205437,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2541,
+            "precision": 0.6040928768201496,
+            "recall": 0.6911301215668618,
+            "f1": 0.6446871062578748
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1723,
+            "precision": 0.5612304120719674,
+            "recall": 0.5140882509303561,
+            "f1": 0.5366259711431742
+          },
+          "C": {
+            "support": 239,
+            "predicted": 134,
+            "precision": 0.43283582089552236,
+            "recall": 0.24267782426778242,
+            "f1": 0.3109919571045576
+          },
+          "I": {
+            "support": 882,
+            "predicted": 825,
+            "precision": 0.48484848484848486,
+            "recall": 0.45351473922902497,
+            "f1": 0.46865846514352666
+          }
+        },
+        "macro_f1": 0.49024087491228335,
+        "nll": {
+          "mean": 1.0278579855392227,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      }
+    ]
+  },
+  "REF_KD": {
+    "arm": "REF_KD",
+    "checkpoint": "REF_KD/step-0569",
+    "selected_step": 569,
+    "selected_exposures": 18206,
+    "stopped_step": 650,
+    "stopped_exposures": 20796,
+    "stop_reason": "budget_exhausted",
+    "selected_adapter_sha256": "69a0162e778d51456ace4e3cf62395b60ea73e257a1bbd49314213adb4e2da4e",
+    "selection_rule": "highest tune Macro-F1; exact tie highest nDCG@10; exact tie earliest step",
+    "tune": {
+      "step": 569,
+      "exposures": 18206,
+      "epoch": 1.7509136372379304,
+      "pairs": 5223,
+      "queries": 256,
+      "zero_idcg_queries": 0,
+      "labels": [
+        "E",
+        "S",
+        "C",
+        "I"
+      ],
+      "gains": [
+        1.0,
+        0.1,
+        0.01,
+        0.0
+      ],
+      "ndcg10": 0.7473707129169181,
+      "ndcg_full": 0.8462065374567271,
+      "random_ndcg10": 0.5684423211524218,
+      "exact_at_1": 0.6796875,
+      "confusion": [
+        [
+          1465,
+          553,
+          32,
+          171
+        ],
+        [
+          627,
+          1024,
+          25,
+          205
+        ],
+        [
+          60,
+          47,
+          58,
+          74
+        ],
+        [
+          205,
+          227,
+          20,
+          430
+        ]
+      ],
+      "accuracy": 0.5699789393069118,
+      "per_class": {
+        "E": {
+          "support": 2221,
+          "predicted": 2357,
+          "precision": 0.6215528213831141,
+          "recall": 0.6596127870328681,
+          "f1": 0.6400174748798602
+        },
+        "S": {
+          "support": 1881,
+          "predicted": 1851,
+          "precision": 0.5532144786601837,
+          "recall": 0.5443912812333865,
+          "f1": 0.5487674169346195
+        },
+        "C": {
+          "support": 239,
+          "predicted": 135,
+          "precision": 0.42962962962962964,
+          "recall": 0.24267782426778242,
+          "f1": 0.31016042780748665
+        },
+        "I": {
+          "support": 882,
+          "predicted": 880,
+          "precision": 0.48863636363636365,
+          "recall": 0.4875283446712018,
+          "f1": 0.4880817253121453
+        }
+      },
+      "macro_f1": 0.4967567612335279,
+      "nll": {
+        "mean": 1.0065739646643903,
+        "rows": 5223,
+        "abstentions": 0,
+        "clip": 1e-12,
+        "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+      }
+    },
+    "history": [
+      {
+        "step": 0,
+        "exposures": 0,
+        "epoch": 0.0,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7439530148653759,
+        "ndcg_full": 0.8441611831396708,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6875,
+        "confusion": [
+          [
+            1391,
+            609,
+            36,
+            185
+          ],
+          [
+            582,
+            1058,
+            30,
+            211
+          ],
+          [
+            61,
+            49,
+            51,
+            78
+          ],
+          [
+            182,
+            268,
+            29,
+            403
+          ]
+        ],
+        "accuracy": 0.5558108366838982,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2216,
+            "precision": 0.6277075812274369,
+            "recall": 0.6262944619540748,
+            "f1": 0.6270002253775073
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1984,
+            "precision": 0.5332661290322581,
+            "recall": 0.5624667729930888,
+            "f1": 0.547477360931436
+          },
+          "C": {
+            "support": 239,
+            "predicted": 146,
+            "precision": 0.3493150684931507,
+            "recall": 0.21338912133891214,
+            "f1": 0.2649350649350649
+          },
+          "I": {
+            "support": 882,
+            "predicted": 877,
+            "precision": 0.45952109464082097,
+            "recall": 0.45691609977324266,
+            "f1": 0.45821489482660605
+          }
+        },
+        "macro_f1": 0.47440688651765356,
+        "nll": {
+          "mean": 1.0516623231741644,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 82,
+        "exposures": 2624,
+        "epoch": 0.252356222350452,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7527189538424195,
+        "ndcg_full": 0.8480685811983479,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6953125,
+        "confusion": [
+          [
+            1587,
+            435,
+            31,
+            168
+          ],
+          [
+            756,
+            872,
+            27,
+            226
+          ],
+          [
+            78,
+            38,
+            50,
+            73
+          ],
+          [
+            248,
+            204,
+            25,
+            405
+          ]
+        ],
+        "accuracy": 0.5579169059927245,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2669,
+            "precision": 0.5946047208692394,
+            "recall": 0.7145429986492571,
+            "f1": 0.649079754601227
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1549,
+            "precision": 0.5629438347320852,
+            "recall": 0.4635832004253057,
+            "f1": 0.5084548104956268
+          },
+          "C": {
+            "support": 239,
+            "predicted": 133,
+            "precision": 0.37593984962406013,
+            "recall": 0.20920502092050208,
+            "f1": 0.26881720430107525
+          },
+          "I": {
+            "support": 882,
+            "predicted": 872,
+            "precision": 0.4644495412844037,
+            "recall": 0.45918367346938777,
+            "f1": 0.4618015963511973
+          }
+        },
+        "macro_f1": 0.47203834143728157,
+        "nll": {
+          "mean": 1.008197784414443,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 163,
+        "exposures": 5216,
+        "epoch": 0.5016349297941912,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7489985185154376,
+        "ndcg_full": 0.8467766163177122,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.69921875,
+        "confusion": [
+          [
+            1497,
+            524,
+            34,
+            166
+          ],
+          [
+            667,
+            995,
+            25,
+            194
+          ],
+          [
+            69,
+            44,
+            58,
+            68
+          ],
+          [
+            204,
+            237,
+            25,
+            416
+          ]
+        ],
+        "accuracy": 0.5678728699980854,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2437,
+            "precision": 0.6142798522773902,
+            "recall": 0.6740207113912652,
+            "f1": 0.6427651352511807
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1800,
+            "precision": 0.5527777777777778,
+            "recall": 0.5289739500265817,
+            "f1": 0.5406139635968487
+          },
+          "C": {
+            "support": 239,
+            "predicted": 142,
+            "precision": 0.4084507042253521,
+            "recall": 0.24267782426778242,
+            "f1": 0.30446194225721784
+          },
+          "I": {
+            "support": 882,
+            "predicted": 844,
+            "precision": 0.4928909952606635,
+            "recall": 0.47165532879818595,
+            "f1": 0.4820393974507532
+          }
+        },
+        "macro_f1": 0.4924701096390001,
+        "nll": {
+          "mean": 1.003601864811067,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 244,
+        "exposures": 7808,
+        "epoch": 0.7509136372379304,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7503798158861462,
+        "ndcg_full": 0.8492696607443877,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6953125,
+        "confusion": [
+          [
+            1422,
+            617,
+            43,
+            139
+          ],
+          [
+            571,
+            1119,
+            37,
+            154
+          ],
+          [
+            59,
+            50,
+            66,
+            64
+          ],
+          [
+            213,
+            264,
+            41,
+            364
+          ]
+        ],
+        "accuracy": 0.5688301742293701,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2265,
+            "precision": 0.6278145695364239,
+            "recall": 0.640252138676272,
+            "f1": 0.6339723584485064
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 2050,
+            "precision": 0.5458536585365854,
+            "recall": 0.594896331738437,
+            "f1": 0.5693207835156449
+          },
+          "C": {
+            "support": 239,
+            "predicted": 187,
+            "precision": 0.35294117647058826,
+            "recall": 0.27615062761506276,
+            "f1": 0.30985915492957744
+          },
+          "I": {
+            "support": 882,
+            "predicted": 721,
+            "precision": 0.5048543689320388,
+            "recall": 0.4126984126984127,
+            "f1": 0.45414847161572053
+          }
+        },
+        "macro_f1": 0.4918251921273623,
+        "nll": {
+          "mean": 0.9894714434038693,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 325,
+        "exposures": 10398,
+        "epoch": 1.0,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7523042300265894,
+        "ndcg_full": 0.8495752511367832,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6953125,
+        "confusion": [
+          [
+            1469,
+            543,
+            29,
+            180
+          ],
+          [
+            641,
+            1010,
+            13,
+            217
+          ],
+          [
+            64,
+            46,
+            43,
+            86
+          ],
+          [
+            214,
+            216,
+            14,
+            438
+          ]
+        ],
+        "accuracy": 0.5667241049205437,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2388,
+            "precision": 0.6151591289782244,
+            "recall": 0.6614137775776677,
+            "f1": 0.6374484703840313
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1815,
+            "precision": 0.5564738292011019,
+            "recall": 0.5369484316852738,
+            "f1": 0.5465367965367965
+          },
+          "C": {
+            "support": 239,
+            "predicted": 99,
+            "precision": 0.43434343434343436,
+            "recall": 0.1799163179916318,
+            "f1": 0.25443786982248523
+          },
+          "I": {
+            "support": 882,
+            "predicted": 921,
+            "precision": 0.4755700325732899,
+            "recall": 0.4965986394557823,
+            "f1": 0.4858569051580699
+          }
+        },
+        "macro_f1": 0.48107001047534576,
+        "nll": {
+          "mean": 0.9971230875259471,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 407,
+        "exposures": 13022,
+        "epoch": 1.252356222350452,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7501990633097585,
+        "ndcg_full": 0.8461914038611649,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6796875,
+        "confusion": [
+          [
+            1488,
+            525,
+            32,
+            176
+          ],
+          [
+            658,
+            994,
+            22,
+            207
+          ],
+          [
+            66,
+            44,
+            56,
+            73
+          ],
+          [
+            216,
+            216,
+            19,
+            431
+          ]
+        ],
+        "accuracy": 0.5684472525368562,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2428,
+            "precision": 0.6128500823723229,
+            "recall": 0.669968482665466,
+            "f1": 0.6401376640137664
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1779,
+            "precision": 0.5587408656548623,
+            "recall": 0.5284423179160022,
+            "f1": 0.5431693989071038
+          },
+          "C": {
+            "support": 239,
+            "predicted": 129,
+            "precision": 0.43410852713178294,
+            "recall": 0.23430962343096234,
+            "f1": 0.30434782608695654
+          },
+          "I": {
+            "support": 882,
+            "predicted": 887,
+            "precision": 0.4859075535512965,
+            "recall": 0.4886621315192744,
+            "f1": 0.48728094968908986
+          }
+        },
+        "macro_f1": 0.4937339596742292,
+        "nll": {
+          "mean": 1.0036181107310846,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 488,
+        "exposures": 15614,
+        "epoch": 1.501634929794191,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7485316292815898,
+        "ndcg_full": 0.8467427071971995,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6796875,
+        "confusion": [
+          [
+            1467,
+            551,
+            36,
+            167
+          ],
+          [
+            634,
+            1024,
+            32,
+            191
+          ],
+          [
+            59,
+            44,
+            66,
+            70
+          ],
+          [
+            211,
+            236,
+            31,
+            404
+          ]
+        ],
+        "accuracy": 0.5669155657668007,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2371,
+            "precision": 0.6187262758329819,
+            "recall": 0.6605132823052678,
+            "f1": 0.6389372822299652
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1855,
+            "precision": 0.5520215633423181,
+            "recall": 0.5443912812333865,
+            "f1": 0.5481798715203426
+          },
+          "C": {
+            "support": 239,
+            "predicted": 165,
+            "precision": 0.4,
+            "recall": 0.27615062761506276,
+            "f1": 0.32673267326732675
+          },
+          "I": {
+            "support": 882,
+            "predicted": 832,
+            "precision": 0.4855769230769231,
+            "recall": 0.4580498866213152,
+            "f1": 0.47141190198366395
+          }
+        },
+        "macro_f1": 0.4963154322503246,
+        "nll": {
+          "mean": 1.004287476687327,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 569,
+        "exposures": 18206,
+        "epoch": 1.7509136372379304,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7473707129169181,
+        "ndcg_full": 0.8462065374567271,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6796875,
+        "confusion": [
+          [
+            1465,
+            553,
+            32,
+            171
+          ],
+          [
+            627,
+            1024,
+            25,
+            205
+          ],
+          [
+            60,
+            47,
+            58,
+            74
+          ],
+          [
+            205,
+            227,
+            20,
+            430
+          ]
+        ],
+        "accuracy": 0.5699789393069118,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2357,
+            "precision": 0.6215528213831141,
+            "recall": 0.6596127870328681,
+            "f1": 0.6400174748798602
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1851,
+            "precision": 0.5532144786601837,
+            "recall": 0.5443912812333865,
+            "f1": 0.5487674169346195
+          },
+          "C": {
+            "support": 239,
+            "predicted": 135,
+            "precision": 0.42962962962962964,
+            "recall": 0.24267782426778242,
+            "f1": 0.31016042780748665
+          },
+          "I": {
+            "support": 882,
+            "predicted": 880,
+            "precision": 0.48863636363636365,
+            "recall": 0.4875283446712018,
+            "f1": 0.4880817253121453
+          }
+        },
+        "macro_f1": 0.4967567612335279,
+        "nll": {
+          "mean": 1.0065739646643903,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 650,
+        "exposures": 20796,
+        "epoch": 2.0,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7489304707653943,
+        "ndcg_full": 0.8469314323842227,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.69140625,
+        "confusion": [
+          [
+            1492,
+            532,
+            30,
+            167
+          ],
+          [
+            656,
+            1013,
+            19,
+            193
+          ],
+          [
+            65,
+            45,
+            55,
+            74
+          ],
+          [
+            223,
+            232,
+            19,
+            408
+          ]
+        ],
+        "accuracy": 0.5682557916905993,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2436,
+            "precision": 0.6124794745484401,
+            "recall": 0.6717694732102657,
+            "f1": 0.6407558514064848
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1822,
+            "precision": 0.5559824368825467,
+            "recall": 0.5385433280170122,
+            "f1": 0.5471239535511747
+          },
+          "C": {
+            "support": 239,
+            "predicted": 123,
+            "precision": 0.44715447154471544,
+            "recall": 0.2301255230125523,
+            "f1": 0.30386740331491713
+          },
+          "I": {
+            "support": 882,
+            "predicted": 842,
+            "precision": 0.4845605700712589,
+            "recall": 0.46258503401360546,
+            "f1": 0.4733178654292343
+          }
+        },
+        "macro_f1": 0.49126626842545273,
+        "nll": {
+          "mean": 1.0058959223749777,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      }
+    ]
+  },
+  "FUSION_KD": {
+    "arm": "FUSION_KD",
+    "checkpoint": "FUSION_KD/step-0488",
+    "selected_step": 488,
+    "selected_exposures": 15614,
+    "stopped_step": 650,
+    "stopped_exposures": 20796,
+    "stop_reason": "budget_exhausted",
+    "selected_adapter_sha256": "17bc2f5f2c9e2909df73178b00c4873807b68a8df4f6739f9ef8a2cc1fa9a410",
+    "selection_rule": "highest tune Macro-F1; exact tie highest nDCG@10; exact tie earliest step",
+    "tune": {
+      "step": 488,
+      "exposures": 15614,
+      "epoch": 1.501634929794191,
+      "pairs": 5223,
+      "queries": 256,
+      "zero_idcg_queries": 0,
+      "labels": [
+        "E",
+        "S",
+        "C",
+        "I"
+      ],
+      "gains": [
+        1.0,
+        0.1,
+        0.01,
+        0.0
+      ],
+      "ndcg10": 0.7523305455604876,
+      "ndcg_full": 0.849841090413366,
+      "random_ndcg10": 0.5684423211524218,
+      "exact_at_1": 0.6875,
+      "confusion": [
+        [
+          1395,
+          589,
+          40,
+          197
+        ],
+        [
+          566,
+          1053,
+          26,
+          236
+        ],
+        [
+          52,
+          51,
+          65,
+          71
+        ],
+        [
+          173,
+          232,
+          28,
+          449
+        ]
+      ],
+      "accuracy": 0.5671070266130577,
+      "per_class": {
+        "E": {
+          "support": 2221,
+          "predicted": 2186,
+          "precision": 0.6381518755718206,
+          "recall": 0.6280954524988743,
+          "f1": 0.6330837304288631
+        },
+        "S": {
+          "support": 1881,
+          "predicted": 1925,
+          "precision": 0.5470129870129871,
+          "recall": 0.5598086124401914,
+          "f1": 0.5533368365738308
+        },
+        "C": {
+          "support": 239,
+          "predicted": 159,
+          "precision": 0.4088050314465409,
+          "recall": 0.2719665271966527,
+          "f1": 0.32663316582914576
+        },
+        "I": {
+          "support": 882,
+          "predicted": 953,
+          "precision": 0.47114375655823715,
+          "recall": 0.5090702947845805,
+          "f1": 0.4893732970027248
+        }
+      },
+      "macro_f1": 0.5006067574586411,
+      "nll": {
+        "mean": 0.9979766717118175,
+        "rows": 5223,
+        "abstentions": 0,
+        "clip": 1e-12,
+        "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+      }
+    },
+    "history": [
+      {
+        "step": 0,
+        "exposures": 0,
+        "epoch": 0.0,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7439530148653759,
+        "ndcg_full": 0.8441611831396708,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6875,
+        "confusion": [
+          [
+            1391,
+            609,
+            36,
+            185
+          ],
+          [
+            582,
+            1058,
+            30,
+            211
+          ],
+          [
+            61,
+            49,
+            51,
+            78
+          ],
+          [
+            182,
+            268,
+            29,
+            403
+          ]
+        ],
+        "accuracy": 0.5558108366838982,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2216,
+            "precision": 0.6277075812274369,
+            "recall": 0.6262944619540748,
+            "f1": 0.6270002253775073
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1984,
+            "precision": 0.5332661290322581,
+            "recall": 0.5624667729930888,
+            "f1": 0.547477360931436
+          },
+          "C": {
+            "support": 239,
+            "predicted": 146,
+            "precision": 0.3493150684931507,
+            "recall": 0.21338912133891214,
+            "f1": 0.2649350649350649
+          },
+          "I": {
+            "support": 882,
+            "predicted": 877,
+            "precision": 0.45952109464082097,
+            "recall": 0.45691609977324266,
+            "f1": 0.45821489482660605
+          }
+        },
+        "macro_f1": 0.47440688651765356,
+        "nll": {
+          "mean": 1.0516623231741644,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 82,
+        "exposures": 2624,
+        "epoch": 0.252356222350452,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7542043249880336,
+        "ndcg_full": 0.8494205671247065,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6953125,
+        "confusion": [
+          [
+            1527,
+            462,
+            30,
+            202
+          ],
+          [
+            682,
+            891,
+            23,
+            285
+          ],
+          [
+            67,
+            42,
+            43,
+            87
+          ],
+          [
+            210,
+            188,
+            18,
+            466
+          ]
+        ],
+        "accuracy": 0.5604058969940647,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2486,
+            "precision": 0.6142397425583266,
+            "recall": 0.6875281404772625,
+            "f1": 0.6488209050350542
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1583,
+            "precision": 0.5628553379658876,
+            "recall": 0.47368421052631576,
+            "f1": 0.5144341801385681
+          },
+          "C": {
+            "support": 239,
+            "predicted": 114,
+            "precision": 0.37719298245614036,
+            "recall": 0.1799163179916318,
+            "f1": 0.24362606232294617
+          },
+          "I": {
+            "support": 882,
+            "predicted": 1040,
+            "precision": 0.4480769230769231,
+            "recall": 0.528344671201814,
+            "f1": 0.48491155046826223
+          }
+        },
+        "macro_f1": 0.4729481744912077,
+        "nll": {
+          "mean": 1.0027693580996058,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 163,
+        "exposures": 5216,
+        "epoch": 0.5016349297941912,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7493243769540606,
+        "ndcg_full": 0.8476017020554392,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.69140625,
+        "confusion": [
+          [
+            1431,
+            559,
+            31,
+            200
+          ],
+          [
+            594,
+            1013,
+            27,
+            247
+          ],
+          [
+            60,
+            48,
+            54,
+            77
+          ],
+          [
+            182,
+            233,
+            20,
+            447
+          ]
+        ],
+        "accuracy": 0.5638521922266897,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2267,
+            "precision": 0.631230701367446,
+            "recall": 0.6443043674020711,
+            "f1": 0.6377005347593583
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1853,
+            "precision": 0.5466810577441986,
+            "recall": 0.5385433280170122,
+            "f1": 0.5425816818425281
+          },
+          "C": {
+            "support": 239,
+            "predicted": 132,
+            "precision": 0.4090909090909091,
+            "recall": 0.22594142259414227,
+            "f1": 0.29110512129380056
+          },
+          "I": {
+            "support": 882,
+            "predicted": 971,
+            "precision": 0.4603501544799176,
+            "recall": 0.5068027210884354,
+            "f1": 0.4824608742579601
+          }
+        },
+        "macro_f1": 0.4884620530384117,
+        "nll": {
+          "mean": 0.9951818454453554,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 244,
+        "exposures": 7808,
+        "epoch": 0.7509136372379304,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7547206815930758,
+        "ndcg_full": 0.8501196434061215,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.70703125,
+        "confusion": [
+          [
+            1378,
+            642,
+            39,
+            162
+          ],
+          [
+            537,
+            1133,
+            32,
+            179
+          ],
+          [
+            52,
+            56,
+            64,
+            67
+          ],
+          [
+            167,
+            274,
+            32,
+            409
+          ]
+        ],
+        "accuracy": 0.5713191652307104,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2134,
+            "precision": 0.6457357075913777,
+            "recall": 0.6204412426834759,
+            "f1": 0.6328358208955224
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 2105,
+            "precision": 0.5382422802850356,
+            "recall": 0.6023391812865497,
+            "f1": 0.5684897139989965
+          },
+          "C": {
+            "support": 239,
+            "predicted": 167,
+            "precision": 0.38323353293413176,
+            "recall": 0.26778242677824265,
+            "f1": 0.31527093596059114
+          },
+          "I": {
+            "support": 882,
+            "predicted": 817,
+            "precision": 0.5006119951040392,
+            "recall": 0.463718820861678,
+            "f1": 0.48145968216598
+          }
+        },
+        "macro_f1": 0.4995140382552725,
+        "nll": {
+          "mean": 0.9837446988523895,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 325,
+        "exposures": 10398,
+        "epoch": 1.0,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7557310710397697,
+        "ndcg_full": 0.8501618841898768,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6953125,
+        "confusion": [
+          [
+            1407,
+            569,
+            29,
+            216
+          ],
+          [
+            582,
+            1018,
+            12,
+            269
+          ],
+          [
+            55,
+            49,
+            40,
+            95
+          ],
+          [
+            184,
+            212,
+            11,
+            475
+          ]
+        ],
+        "accuracy": 0.562894887995405,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2228,
+            "precision": 0.631508078994614,
+            "recall": 0.6334984241332733,
+            "f1": 0.6325016857720837
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1848,
+            "precision": 0.5508658008658008,
+            "recall": 0.5412014885699096,
+            "f1": 0.5459908822740681
+          },
+          "C": {
+            "support": 239,
+            "predicted": 92,
+            "precision": 0.43478260869565216,
+            "recall": 0.16736401673640167,
+            "f1": 0.24169184290030213
+          },
+          "I": {
+            "support": 882,
+            "predicted": 1055,
+            "precision": 0.45023696682464454,
+            "recall": 0.5385487528344671,
+            "f1": 0.490449148167269
+          }
+        },
+        "macro_f1": 0.4776583897784307,
+        "nll": {
+          "mean": 0.995529916254838,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 407,
+        "exposures": 13022,
+        "epoch": 1.252356222350452,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7530447816878454,
+        "ndcg_full": 0.8494066245236518,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.69140625,
+        "confusion": [
+          [
+            1441,
+            540,
+            30,
+            210
+          ],
+          [
+            605,
+            988,
+            23,
+            265
+          ],
+          [
+            57,
+            45,
+            54,
+            83
+          ],
+          [
+            184,
+            205,
+            21,
+            472
+          ]
+        ],
+        "accuracy": 0.565766800689259,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2287,
+            "precision": 0.630083078268474,
+            "recall": 0.6488068437640703,
+            "f1": 0.6393078970718722
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1778,
+            "precision": 0.5556805399325084,
+            "recall": 0.5252525252525253,
+            "f1": 0.5400382618201695
+          },
+          "C": {
+            "support": 239,
+            "predicted": 128,
+            "precision": 0.421875,
+            "recall": 0.22594142259414227,
+            "f1": 0.29427792915531337
+          },
+          "I": {
+            "support": 882,
+            "predicted": 1030,
+            "precision": 0.458252427184466,
+            "recall": 0.5351473922902494,
+            "f1": 0.49372384937238495
+          }
+        },
+        "macro_f1": 0.491836984354935,
+        "nll": {
+          "mean": 1.0007609471073173,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 488,
+        "exposures": 15614,
+        "epoch": 1.501634929794191,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7523305455604876,
+        "ndcg_full": 0.849841090413366,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6875,
+        "confusion": [
+          [
+            1395,
+            589,
+            40,
+            197
+          ],
+          [
+            566,
+            1053,
+            26,
+            236
+          ],
+          [
+            52,
+            51,
+            65,
+            71
+          ],
+          [
+            173,
+            232,
+            28,
+            449
+          ]
+        ],
+        "accuracy": 0.5671070266130577,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2186,
+            "precision": 0.6381518755718206,
+            "recall": 0.6280954524988743,
+            "f1": 0.6330837304288631
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1925,
+            "precision": 0.5470129870129871,
+            "recall": 0.5598086124401914,
+            "f1": 0.5533368365738308
+          },
+          "C": {
+            "support": 239,
+            "predicted": 159,
+            "precision": 0.4088050314465409,
+            "recall": 0.2719665271966527,
+            "f1": 0.32663316582914576
+          },
+          "I": {
+            "support": 882,
+            "predicted": 953,
+            "precision": 0.47114375655823715,
+            "recall": 0.5090702947845805,
+            "f1": 0.4893732970027248
+          }
+        },
+        "macro_f1": 0.5006067574586411,
+        "nll": {
+          "mean": 0.9979766717118175,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 569,
+        "exposures": 18206,
+        "epoch": 1.7509136372379304,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7516228626156993,
+        "ndcg_full": 0.848633069077641,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.68359375,
+        "confusion": [
+          [
+            1411,
+            573,
+            32,
+            205
+          ],
+          [
+            584,
+            1028,
+            22,
+            247
+          ],
+          [
+            54,
+            49,
+            56,
+            80
+          ],
+          [
+            173,
+            230,
+            20,
+            459
+          ]
+        ],
+        "accuracy": 0.5655753398430021,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2222,
+            "precision": 0.635013501350135,
+            "recall": 0.6352994146780729,
+            "f1": 0.6351564258383975
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1880,
+            "precision": 0.5468085106382978,
+            "recall": 0.5465178096757044,
+            "f1": 0.5466631215102367
+          },
+          "C": {
+            "support": 239,
+            "predicted": 130,
+            "precision": 0.4307692307692308,
+            "recall": 0.23430962343096234,
+            "f1": 0.3035230352303523
+          },
+          "I": {
+            "support": 882,
+            "predicted": 991,
+            "precision": 0.46316851664984865,
+            "recall": 0.5204081632653061,
+            "f1": 0.49012279765082756
+          }
+        },
+        "macro_f1": 0.4938663450574535,
+        "nll": {
+          "mean": 1.0006562769427705,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      },
+      {
+        "step": 650,
+        "exposures": 20796,
+        "epoch": 2.0,
+        "pairs": 5223,
+        "queries": 256,
+        "zero_idcg_queries": 0,
+        "labels": [
+          "E",
+          "S",
+          "C",
+          "I"
+        ],
+        "gains": [
+          1.0,
+          0.1,
+          0.01,
+          0.0
+        ],
+        "ndcg10": 0.7499404047180417,
+        "ndcg_full": 0.8475947584362719,
+        "random_ndcg10": 0.5684423211524218,
+        "exact_at_1": 0.6796875,
+        "confusion": [
+          [
+            1457,
+            534,
+            32,
+            198
+          ],
+          [
+            623,
+            995,
+            22,
+            241
+          ],
+          [
+            58,
+            48,
+            59,
+            74
+          ],
+          [
+            188,
+            224,
+            23,
+            447
+          ]
+        ],
+        "accuracy": 0.5663411832280298,
+        "per_class": {
+          "E": {
+            "support": 2221,
+            "predicted": 2326,
+            "precision": 0.6263972484952709,
+            "recall": 0.6560108059432688,
+            "f1": 0.6408621068836595
+          },
+          "S": {
+            "support": 1881,
+            "predicted": 1801,
+            "precision": 0.5524708495280399,
+            "recall": 0.5289739500265817,
+            "f1": 0.5404671374253124
+          },
+          "C": {
+            "support": 239,
+            "predicted": 136,
+            "precision": 0.4338235294117647,
+            "recall": 0.24686192468619247,
+            "f1": 0.31466666666666665
+          },
+          "I": {
+            "support": 882,
+            "predicted": 960,
+            "precision": 0.465625,
+            "recall": 0.5068027210884354,
+            "f1": 0.48534201954397393
+          }
+        },
+        "macro_f1": 0.4953344826299031,
+        "nll": {
+          "mean": 1.0005273438188358,
+          "rows": 5223,
+          "abstentions": 0,
+          "clip": 1e-12,
+          "scope": "mean -log(p_gold); probability clipped to [1e-12, 1]; denominator excludes rows without probabilities (teacher abstentions); abstention count reported separately"
+        }
+      }
+    ]
+  }
+}

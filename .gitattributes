@@ -2,3 +2,6 @@
 *.py text eol=lf
 *.md text eol=lf
 *.json text eol=lf
+*.sh text eol=lf
+# Keep the exact bytes of the original target-preparation manifest.
+results/fusion_continue_20261021/target_manifest.json -text

@@ -1,0 +1,8 @@
+# Remote runtime found on 2026-10-21; torch is installed separately for the GPU.
+# Existing remote: torch==2.8.0+cu128, Python 3.12.3. Do not reinstall if checks pass.
+transformers==4.57.6
+peft==0.18.1
+accelerate==1.14.0
+huggingface-hub==0.36.2
+safetensors==0.8.0
+numpy==2.3.2
