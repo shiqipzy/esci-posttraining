@@ -11,8 +11,12 @@
   "accuracy_denominator": "all 10459 final-F pairs; teacher abstentions count as incorrect",
   "ranking_unit": "query",
   "bootstrap_unit": "whole query, paired across systems",
-  "bootstrap_draws": 2000,
+  "bootstrap_draws": 10000,
   "bootstrap_seed": 20260930,
-  "result_source": "results/final/analysis.json",
-  "scope": "current reporting and offline display; frozen training, predictions and audit records retain their original contents"
+  "result_source": "results/fusion_continue_20261021/report.json",
+  "scope": "current fusion-continuation reporting and navigation; historical reports and frozen run artifacts retain their original experiment definitions",
+  "selection_data": "tune only; highest Macro-F1, exact tie nDCG@10, then earlier step",
+  "evaluation_set_status": "F is a previously viewed fixed evaluation set, not a new independent test set",
+  "historical_result_source": "results/final/analysis.json",
+  "historical_bootstrap_draws": 2000
 }

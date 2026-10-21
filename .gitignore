@@ -1,14 +1,25 @@
-__pycache__/
+_archive/
+models/
+data/
+runs/*
+!runs/README.md
+**/__pycache__/
+**/.secrets/
 *.py[cod]
-.pytest_cache/
-.venv/
-*.egg-info/
+
+# Local caches, editor state and temporary deployment files.
+/tmp/
 /build/
 /dist/
-/_archive/
 /.workbuddy/
 /.claude/
 /.agents/
+/.vscode/
+.pytest_cache/
+.venv/
+*.egg-info/
+
+# Credentials, model weights and generated experiment artifacts.
 .env
 .env.*
 *.pem
@@ -23,7 +34,21 @@ __pycache__/
 *.log
 *.zip
 *.tar.gz
-/models/
-/data/
-/runs/
-/minitoolrl/artifacts/
+*.tgz
+
+# Publish selected result summaries; keep generated diagnostics and caches local.
+/provenance/
+/results/*
+!/results/README.md
+!/results/final/
+/results/final/*
+!/results/final/README.md
+!/results/final/RESULT.md
+!/results/final/analysis.json
+!/results/fusion_continue_20261021/
+/results/fusion_continue_20261021/*
+!/results/fusion_continue_20261021/RESULT.md
+!/results/fusion_continue_20261021/report.json
+!/results/fusion_continue_20261021/run_manifest.json
+!/results/fusion_continue_20261021/selected_all.json
+!/results/fusion_continue_20261021/target_manifest.json

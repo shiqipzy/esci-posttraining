@@ -1,0 +1,139 @@
+{
+  "version": "esci-direct-sft-v1",
+  "created": "2026-10-19",
+  "description": "Qwen3-0.6B direct SFT: CE / KD / WCE from one shared untrained LoRA, merged SFT+post-training inputs, joint-budget alternating training.",
+  "seed": 20260928,
+  "arms": [
+    "CE",
+    "KD",
+    "WCE"
+  ],
+  "base_model": "models/base",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "max_length": 512,
+  "eval_batch_size": 8,
+  "gradient_checkpointing": true,
+  "effective_batch": 32,
+  "microbatch": 16,
+  "execution_deviations": [
+    {
+      "item": "microbatch",
+      "planned": 4,
+      "actual": 16,
+      "decided": "2026-10-19, before the formal run, with explicit owner approval",
+      "reason": "The rented RTX 4080 SUPER was latency-bound at microbatch=4 (3.4 s/step, ~15% GPU utilization). Identical data measured 1.7 s/step at microbatch=8 and 0.84 s/step at microbatch=32.",
+      "impact": "All three arms use the same value. Effective batch stays 32, the loss is still averaged over the actual rows in each batch, and sample order, seeds, learning rate, schedule and evaluation positions are unchanged. Only the gradient-accumulation granularity differs, which changes floating-point association but not the estimated mean gradient."
+    }
+  ],
+  "steps_per_epoch": 980,
+  "half_epoch_offset": 490,
+  "eval_offsets": [
+    0,
+    490,
+    980
+  ],
+  "min_epochs": 2,
+  "max_epochs": 6,
+  "schedule_steps": 5880,
+  "warmup_steps": 294,
+  "final_lr_ratio": 0.1,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "max_grad_norm": 1.0,
+  "precision": "cuda bf16 backbone, fp32 loss",
+  "plateau": {
+    "window_points": 4,
+    "threshold": 0.005,
+    "metrics": [
+      "accuracy",
+      "macro_f1"
+    ]
+  },
+  "selection": "max tune macro-F1, tie -> max tune nDCG@10, tie -> earlier step",
+  "inputs": {
+    "pilot_split": "pilot_train",
+    "pilot_rows": 20941,
+    "pilot_queries": 1024,
+    "post_rows": 10398,
+    "post_queries": 512,
+    "union_rows": 31339,
+    "union_queries": 1536,
+    "tune_rows": 5223,
+    "tune_queries": 256,
+    "gate_rows": 10438,
+    "gate_queries": 512,
+    "final_rows": 10459,
+    "final_queries": 512,
+    "teacher_available": 10387,
+    "teacher_correct": 5467,
+    "teacher_sha256": "988aede6e6d66bfd50ee402f656746bd114fe509734a3c5533bf195adc54ce6f",
+    "final_teacher_sha256": "0c1023da27070e8ce759611c027a3d87bcdc52abf5981554124ef269de5f43bb",
+    "final_teacher": "results/final/predictions/T/F_predictions.jsonl"
+  },
+  "fusion": {
+    "arms": [
+      "CE",
+      "KD"
+    ],
+    "half_budget": 5230,
+    "rule": "equal-weight probability fusion on the 5,230 lowest student max-probability rows (SHA256 tie-break); teacher abstention falls back to the student; T alone counts abstentions",
+    "full_budget": 10459
+  },
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 20260930,
+    "unit": "query",
+    "ci": [
+      0.025,
+      0.975
+    ]
+  },
+  "objects": [
+    "B0",
+    "CE",
+    "KD",
+    "WCE",
+    "T",
+    "CE_C50",
+    "CE_Full",
+    "KD_C50",
+    "KD_Full"
+  ],
+  "comparisons": [
+    "KD-CE",
+    "KD-WCE",
+    "WCE-CE",
+    "CE-B0",
+    "KD-B0",
+    "WCE-B0",
+    "KD-T",
+    "CE_C50-CE",
+    "CE_C50-T",
+    "KD_C50-KD",
+    "KD_C50-T",
+    "CE_Full-CE_C50",
+    "KD_Full-KD_C50"
+  ],
+  "evaluation_policy": {
+    "primary": [
+      "accuracy",
+      "macro_f1"
+    ],
+    "secondary": [
+      "ndcg10",
+      "nll"
+    ],
+    "sets": "tune selects checkpoints; gate and F are evaluated only after the models are fixed; both are existing development sets, not new independent tests"
+  }
+}

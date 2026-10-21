@@ -1,8 +1,10 @@
-# 最终 F：教师与融合统一评测
+# 教师概率监督与融合：F 评测结果
+
+本报告对应 S / A2 / TA2 / G2 续训与教师概率融合实验，采用 2,000 次查询配对 Bootstrap。后续融合输出蒸馏结果见 [独立学生实验](../fusion_continue_20261021/RESULT.md)。
 
 同一固定 F：512 查询 / 10459 商品对。分类并列报告 **accuracy 和 Macro-F1**，分别评价总体正确率与类别平均表现；nDCG@10 评价排序。模型按单学生、教师、融合的方案顺序列出，不合成总分或完整排名。
 
-数据源：[analysis.json](analysis.json)。当前展示规则：[evaluation_policy.json](../../configs/evaluation_policy.json)。
+历史数据源：[analysis.json](analysis.json)。本报告的评测规则和区间次数按当时实验保留；当前报告配置见 [evaluation_policy.json](../../configs/evaluation_policy.json)。
 
 ## 完整指标
 

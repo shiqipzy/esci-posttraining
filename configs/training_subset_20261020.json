@@ -1,0 +1,135 @@
+{
+  "version": "esci-subset-direct-v1",
+  "created": "2026-10-20",
+  "plan": "results/diagnostics/direct_sft_20261020/诊断与下一轮验证.md",
+  "description": "Post-training-only (10,398 rows) direct SFT from one shared untrained LoRA: CE / KD / WCE, 975 steps per arm, no student-KL anchor, no new teacher request.",
+  "data_route": "posttraining_only",
+  "arms": [
+    "CE",
+    "KD",
+    "WCE"
+  ],
+  "objectives": {
+    "CE": "CE(y,p)",
+    "KD": "CE(y,p) + c * m * KL(T||p)",
+    "WCE": "CE(y,p) + c * m * CE(y,p)"
+  },
+  "objects": [
+    "B0",
+    "CE",
+    "KD",
+    "WCE"
+  ],
+  "comparisons": [
+    "KD-WCE",
+    "KD-CE",
+    "WCE-CE"
+  ],
+  "seed": 20260928,
+  "base_model": "models/base",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "max_length": 512,
+  "eval_batch_size": 32,
+  "gradient_checkpointing": true,
+  "effective_batch": 32,
+  "microbatch": 16,
+  "steps_per_epoch": 325,
+  "half_epoch_offset": 163,
+  "tail_rows": 30,
+  "eval_offsets": [
+    0,
+    163,
+    325
+  ],
+  "max_epochs": 3,
+  "min_epochs": 3,
+  "schedule_steps": 975,
+  "warmup_steps": 49,
+  "learning_rate": 0.0001,
+  "final_lr_ratio": 0.1,
+  "final_learning_rate": 1e-05,
+  "weight_decay": 0.01,
+  "max_grad_norm": 1.0,
+  "precision": "cuda bf16 backbone, fp32 loss",
+  "fixed_report_step": 975,
+  "plateau": {
+    "window_points": 3,
+    "threshold": 0.005,
+    "metrics": [
+      "accuracy",
+      "macro_f1"
+    ]
+  },
+  "selection": "max tune macro-F1, tie -> max tune nDCG@10, tie -> earlier step",
+  "inputs": {
+    "post_rows": 10398,
+    "post_queries": 512,
+    "pilot_rows_not_used": 20941,
+    "merged_rows_for_reference": 31339,
+    "tune_rows": 5223,
+    "tune_queries": 256,
+    "gate_rows": 10438,
+    "gate_queries": 512,
+    "final_rows": 10459,
+    "final_queries": 512,
+    "teacher_available": 10387,
+    "teacher_correct": 5467,
+    "teacher_sha256": "988aede6e6d66bfd50ee402f656746bd114fe509734a3c5533bf195adc54ce6f",
+    "final_teacher_sha256": "0c1023da27070e8ce759611c027a3d87bcdc52abf5981554124ef269de5f43bb",
+    "final_teacher": "results/final/predictions/T/F_predictions.jsonl",
+    "class_rows": {
+      "E": 4833,
+      "S": 3368,
+      "C": 516,
+      "I": 1681
+    },
+    "class_teacher_correct": {
+      "E": 2458,
+      "S": 1698,
+      "C": 195,
+      "I": 1116
+    }
+  },
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 20260930,
+    "unit": "query",
+    "ci": [
+      0.025,
+      0.975
+    ]
+  },
+  "evaluation_policy": {
+    "primary": [
+      "accuracy",
+      "macro_f1"
+    ],
+    "secondary": [
+      "ndcg10",
+      "nll"
+    ],
+    "selection": "tune selects every checkpoint with one rule; the fixed step 975 result is reported for every arm regardless of selection",
+    "sets": "tune selects checkpoints; gate and F are existing development sets reported after the models are fixed; F is never used to choose a learning rate, a weight or a checkpoint",
+    "fusion": "not part of this round; no fusion object is compared"
+  },
+  "execution_deviations": [
+    {
+      "item": "learning_rate_warmup",
+      "planned": "warmup 49 steps to the peak 1e-4, then cosine to 1e-5 at step 975",
+      "actual": "lr(step) = peak * min(1, (step+1)/49) for step < 49, then peak * (0.1 + 0.9 * (1+cos(pi*(step-49)/926))/2)",
+      "reason": "The warmup numerator is (step+1)/warmup so the first update is not a zero-learning-rate update, while exactly 49 updates still ramp to the peak. Every arm shares this schedule, so no arm comparison is affected.",
+      "impact": "One-line change against train_direct.build_scheduler; endpoint values are verified in the self-test (step 0 = 2.04e-6, step 48 = 1e-4, step 975 = 1e-5)."
+    }
+  ]
+}

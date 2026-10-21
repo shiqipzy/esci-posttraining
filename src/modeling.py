@@ -94,18 +94,3 @@ def predict(model, rows, batch_size, max_length=512, demonstrations=()):
                        'input_tokens': tokens,
                        'probabilities': dict(zip(LABELS, probabilities))})
     return result
-
-
-def objective(logits, labels, teacher, reference, mask, arm, additional_weight):
-    logp = F.log_softmax(logits.float(), dim=-1)
-    ce = F.nll_loss(logp, labels, reduction='none')
-    anchor = F.kl_div(logp, reference.float(), reduction='none').sum(-1)
-    if arm == 'TA2':
-        extra = F.kl_div(logp, teacher.float(), reduction='none').sum(-1)
-    elif arm == 'G2':
-        extra = ce
-    else:
-        extra = ce.new_zeros(ce.shape)
-    extra = mask.to(device=logits.device, dtype=logp.dtype) * extra
-    loss = ce + anchor + additional_weight * extra
-    return loss, {'CE': ce, 'KL_initial': anchor, 'selected_extra': extra}

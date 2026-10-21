@@ -14,7 +14,6 @@ DATA = ROOT / 'data'
 MODELS = ROOT / 'models'
 LABELS = ['E', 'S', 'C', 'I']
 GAINS = [1.0, 0.1, 0.01, 0.0]
-ARMS = ('A2', 'TA2', 'G2')
 SYSTEM = '''Classify a product for a shopping query using the product title and brand.
 E = Exact: the product satisfies the query intent.
 S = Substitute: the product is not an exact match but can serve as an alternative.

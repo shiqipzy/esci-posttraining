@@ -8,5 +8,5 @@ PYTHON_BIN="${ESCI_PYTHON:-/root/miniconda3/bin/python}"
 # Prevent concurrent jobs writing to the same experiment directory.
 exec 9>.fusion_run.lock
 flock -n 9 || { echo 'Another fusion run is already active.'; exit 2; }
-"$PYTHON_BIN" -B src/train_fusion_continue.py --gpu-check
-"$PYTHON_BIN" -u -B src/train_fusion_continue.py --train --evaluate --resume
+"$PYTHON_BIN" -B src/train.py fusion --gpu-check
+"$PYTHON_BIN" -u -B src/train.py fusion --train --evaluate --resume

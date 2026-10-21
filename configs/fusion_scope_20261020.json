@@ -1,0 +1,32 @@
+{
+  "status": "scope_corrected_not_executable_training_config",
+  "training_data": ["data/posttraining/train.jsonl"],
+  "training_rows": 10398,
+  "training_queries": 512,
+  "pilot_rows_used": 0,
+  "additional_gold_only_rows": 0,
+  "arms": ["CE", "KD", "WCE"],
+  "initialization": "same official base and shared untrained LoRA; no old S or trained checkpoint initialization",
+  "objectives": {
+    "CE": "CE(y,p)",
+    "KD": "CE(y,p) + lambda * KL(q||p) on every training row",
+    "WCE": "(1+lambda) * CE(y,p) on every training row"
+  },
+  "required_soft_target_rows": 10398,
+  "required_soft_target_coverage": 1.0,
+  "kd_mask": "all training rows, regardless of teacher correctness or C50 route",
+  "independent_old_student_KL": false,
+  "teacher_cache": "data/posttraining/teacher.jsonl",
+  "teacher_available": 10387,
+  "teacher_failures": 11,
+  "route_selected_rows": 5199,
+  "target": "(local_model + cached_teacher)/2 on routed valid teacher rows; local_model elsewhere",
+  "local_model_probability_status": "current model training-split probabilities not yet prepared",
+  "historical_S_as_automatic_fallback": false,
+  "withdrawn_target_candidate": "runs/fusion_targets_20261020/targets.jsonl",
+  "new_api_requests": 0,
+  "model_forwards_this_revision": 0,
+  "training_started": false,
+  "selection": "per-arm best tune checkpoint, not a prespecified best step",
+  "pending_execution_parameters": ["local model checkpoint identity", "lambda", "learning rate schedule", "early stopping", "maximum budget", "trainer integration"]
+}

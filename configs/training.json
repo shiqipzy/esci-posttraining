@@ -26,23 +26,5 @@
       "up_proj",
       "down_proj"
     ]
-  },
-  "posttraining": {
-    "seed": 20261001,
-    "arms": [
-      "A2",
-      "TA2",
-      "G2"
-    ],
-    "epochs": 2,
-    "effective_batch": 32,
-    "microbatch": 4,
-    "learning_rate": 2e-05,
-    "warmup_steps": 8,
-    "weight_decay": 0.01,
-    "max_grad_norm": 1.0,
-    "max_length": 512,
-    "eval_batch_size": 8,
-    "gradient_checkpointing": false
   }
 }
